@@ -3,7 +3,7 @@
 ### Requirements   
 
 Tools: [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest)    
-Rails: 4.2.3
+Rails: 4.2.3   
 Ruby: 2.3.0
 
 ### Installation
