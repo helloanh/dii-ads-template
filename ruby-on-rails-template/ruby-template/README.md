@@ -127,6 +127,7 @@ Local git is configured with url of 'https://604307@ruby-template-azure.scm.azur
   ],
   "ftpPublishingUrl": "ftp://waws-prod-blu-077.ftp.azurewebsites.windows.net/site/wwwroot",
   ...
+  < JSON data removed for brevity. >
 }
 ```
 
