@@ -1,12 +1,12 @@
-# Dii ADS Template with Ruby on Rails Framework
+# Dii ADS Template with Ruby on Rails Framework  
 
 ### Requirements   
 
 Tools: [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest)    
-Rails: 4.2.3   
+Rails: 4.2.3
 Ruby: 2.3.0
 
-### Installation
+### Azure Configuration 
 
 1. Login 
 
@@ -58,7 +58,7 @@ Output
 }
 ```
 
-3. Create resource group. Designate the location that is closest to your geographic location.
+3. Create resource group. Designate the location that is closest to your geographic location.  Replace **myDiiRubyRG** with your own resource group.  
 
 ```bash
 # list all location
@@ -80,6 +80,53 @@ Output
   },
   "tags": null,
   "type": null
+}
+```
+
+4. Create Azure App Service Plan
+
+```bash
+az appservice plan create --name myRailsServicePlan --resource-group myDiiRubyRG  --sku B1 --is-linux
+
+```
+
+### Rails Web App  
+
+1. Create a web app in service plan called **myRailsServicePlan** you created earlier in Azure Configuration, step 4.    
+
+
+In bash shell for MacOS or Linux OS  
+
+ ```bash 
+az webapp create --resource-group myDiiRubyRG --plan myRailsServicePlan --name <app-name> --runtime "RUBY|2.6.2" --deployment-local-git
+ ```
+
+In powershell for Windows OS
+
+ ```powershell
+az --% webapp create --resource-group myDiiRubyRG --plan myRailsServicePlan --name <app-name> --runtime "RUBY|2.6.2" --deployment-local-git
+```
+
+You should receive a JSON output to verify the app is created successfully
+```bash
+Local git is configured with url of 'https://604307@ruby-template-azure.scm.azurewebsites.net/ruby-template-azure.git'
+{
+  "availabilityState": "Normal",
+  "clientAffinityEnabled": true,
+  "clientCertEnabled": false,
+  "clientCertExclusionPaths": null,
+  "cloningInfo": null,
+  "containerSize": 0,
+  "dailyMemoryTimeQuota": 0,
+  "defaultHostName": "ruby-template-azure.azurewebsites.net",
+  "deploymentLocalGitUrl": "https://604307@ruby-template-azure.scm.azurewebsites.net/ruby-template-azure.git",
+  "enabled": true,
+  "enabledHostNames": [
+    "ruby-template-azure.azurewebsites.net",
+    "ruby-template-azure.scm.azurewebsites.net"
+  ],
+  "ftpPublishingUrl": "ftp://waws-prod-blu-077.ftp.azurewebsites.windows.net/site/wwwroot",
+  ...
 }
 ```
 
