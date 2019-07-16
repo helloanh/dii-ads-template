@@ -1,14 +1,11 @@
-#DDI ADS Template
+# DDI ADS Template
 
-## Templates for Azure cloud includes the following:  
+## Templates for Azure cloud:  
 
 - HTML5  
 - ASP.NET  
-- RAILS  
-- PYTHON  
 
-## Templates for AWS includes the following:  
-
+## Templates for AWS includes:  
 - HTML5  
 - ASP.NET  
 - GO  
