@@ -4,6 +4,7 @@
 
 - HTML5  
 - ASP.NET  
+- [Rails](/ruby-on-rails-template/ruby-template)
 
 ## Templates for AWS:  
 - HTML5  
