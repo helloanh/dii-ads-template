@@ -1,0 +1,198 @@
+html {
+    box-sizing: border-box
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit
+}
+
+.usa-sr-only {
+    position: absolute;
+    left: -999em
+}
+
+@media screen and (min-width:951px) {
+    .usa-header {
+        border-bottom: 1px solid #1b2a3e;
+        background-color: #1b2a3e
+    }
+    .usa-logo a {
+        color: #fff
+    }
+    .usa-header-extended .usa-nav {
+        border-top: 1px solid rgba(241, 241, 241, .7);
+        background-color: #1b2a3e;
+        color: #fff
+    }
+    .usa-nav-link:hover span {
+        border-bottom: .7rem solid #0071bc
+    }
+}
+
+.usa-nav-primary>li {
+    background-color: transparent
+}
+
+.usa-nav-primary a {
+    color: #212121
+}
+
+.usa-nav-primary a:hover {
+    background-color: #f1f1f1;
+    color: #0071bc
+}
+
+.usa-nav-primary a.usa-current {
+    border-left: 4px solid #0071bc;
+    color: #0071bc
+}
+
+@media screen and (min-width:951px) {
+    .usa-nav-primary>li>a {
+        color: #fff
+    }
+    .usa-nav-primary>li>a:hover {
+        background-color: transparent;
+        color: #fdb81e
+    }
+    .usa-nav-primary button {
+        color: #fff
+    }
+}
+
+.usa-nav-primary button:active,
+.usa-nav-primary button:focus {
+    outline: #aeb0b5 dotted 2px;
+    outline-offset: 3px
+}
+
+.usa-nav-primary button:hover {
+    background-color: #dce4ef;
+    color: #212121
+}
+
+@media screen and (min-width:951px) {
+    .usa-nav-primary .usa-active,
+    .usa-nav-primary button:hover {
+        background-color: transparent;
+        color: #fad980
+    }
+    .usa-nav-primary button[aria-expanded=true] {
+        background-color: #1b2a3e;
+        color: #fff
+    }
+    .usa-nav-primary button[aria-expanded=true]:hover {
+        background-color: #1b2a3e
+    }
+    .usa-nav-primary button[aria-expanded=true] span {
+        border-bottom: .7rem solid #0071bc
+    }
+}
+
+.usa-nav-secondary-links .usa-header-search-button,
+.usa-nav-secondary-links a {
+    color: #fff
+}
+
+.usa-nav-secondary-links .usa-header-search-button:hover,
+.usa-nav-secondary-links a:hover {
+    color: #fad980
+}
+
+@media screen and (max-width:951px) {
+    .usa-nav-secondary-links .usa-header-search-button,
+    .usa-nav-secondary-links a {
+        color: #212121
+    }
+    .usa-nav-secondary-links .usa-header-search-button:hover,
+    .usa-nav-secondary-links a:hover {
+        color: #205493
+    }
+}
+
+@media screen and (min-width:951px) {
+    .usa-nav-submenu {
+        background-color: #1b2a3e
+    }
+    .usa-nav-submenu li a:hover {
+        text-decoration: none;
+        color: #fad980
+    }
+    .usa-nav-submenu a {
+        color: #fff
+    }
+    .usa-nav-submenu a:hover {
+        background-color: #1b2a3e;
+        color: #fff
+    }
+}
+
+@media screen and (max-width:951px) {
+    .usa-logo a {
+        color: #212121!important
+    }
+}
+
+.usa-footer .usa-footer-primary-link {
+    color: #fff
+}
+
+@media screen and (max-width:720px) {
+    li.usa-footer-primary-content,
+    ul.usa-footer-primary-content {
+        border-top: 1px solid rgba(241, 241, 241, .9)
+    }
+}
+
+.usa-footer .usa-footer-primary-link:hover {
+    color: #fad980
+}
+
+.usa-footer a {
+    color: #fff
+}
+
+.usa-footer-primary-section {
+    background-color: #1b2a3e
+}
+
+.usa-footer-primary_section {
+    background-color: #1b2a3e;
+    border-bottom: 1px solid rgba(241, 241, 241, .7);
+    color: #fff
+}
+
+.usa-footer-secondary_section {
+    background-color: #1b2a3e;
+    color: #fff
+}
+
+footer a {
+    color: #fff
+}
+
+footer a:hover {
+    color: #fad980
+}
+
+@media screen and (max-width:600px) {
+    footer a:hover {
+        color: #0071bc!important;
+        background-color: #f1f1f1
+    }
+}
+
+a.back-to-top {
+    background: #323a45;
+    color: #fff
+}
+
+a.back-to-top:hover {
+    background: #0071bc
+}
+
+a.back-to-top:hover i {
+    color: #fff
+}
