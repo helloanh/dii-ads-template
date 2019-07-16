@@ -134,5 +134,5 @@ Local git is configured with url of 'https://604307@ruby-template-azure.scm.azur
 
 Copy the value for "defaultHostName," open your web browser, and paste the url value to navigate to your Ruby default app. You should see the following default splash page:  
 
-![default-azure-rails](/screenshots/azure-default-screenshot.jpg)
+![default-azure-rails](../screenshots/azure-default-screenshot.jpg)
 
