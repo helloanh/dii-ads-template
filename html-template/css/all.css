@@ -26188,4 +26188,14 @@ img[data-srcset] {
 }
 
 
+/* updates */
+  .copyright {
+  font-size: 1.3rem;
+  }
+  .copyright span a {
+  display: inline;
+  padding: .5em;
+  text-decoration: none;
+  }
+
 /*# sourceMappingURL=https://prod-va-gov-assets.s3-us-gov-west-1.amazonaws.com/generated/style.92ac990e42609e4a75b5-1562609077707.css.map*/

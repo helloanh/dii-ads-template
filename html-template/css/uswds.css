@@ -978,9 +978,9 @@ textarea {
 select {
     -moz-appearance: none;
     appearance: none;
-    background-color: #fff;
-    background-image: url(../img/uswds/arrow-both.png);
-    background-image: none, url(../img/uswds/arrow-both.svg), url(../img/uswds/arrow-both.png);
+    background-color: #888;
+    background-image: url(../img/angle-arrow-down-hover.png);
+    background-image: none, url(../img/angle-arrow-down-hover.svg), url(../img/angle-arrow-down-hover.png);
     background-position: right 1.3rem center;
     background-repeat: no-repeat;
     background-size: 1rem;
