@@ -131,8 +131,25 @@ Local git is configured with url of 'https://604307@ruby-template-azure.scm.azur
 }
 ```
 
+Keep the local git configured url from the json export.  For this example, it is *https://604307@ruby-template-azure.scm.azurewebsites.net/ruby-template-azure.git*.  This is the url you will use for step two in deployment.  
+
 
 Copy the value for "defaultHostName," open your web browser, and paste the url value to navigate to your Ruby default app. You should see the following default splash page:  
 
 ![default-azure-rails](../screenshots/azure-default-screenshot.jpg)
+
+2. Deploy application   
+
+Change into the local directory of your rails application.  Then remote add the application to azure, then push to azure master to deploy.  
+
+```bash
+git remote add azure <Your git genetated deployment URL>
+git push azure master
+```
+
+You will need to input your password.  
+
+
+
+
 
