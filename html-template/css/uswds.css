@@ -261,6 +261,7 @@ legend {
     src: url(../fonts/public-sans/PublicSans-Black.eot?#iefix) format("embedded-opentype"), url(../fonts/public-sans/PublicSans-Black.woff2) format("woff2"), url(../fonts/public-sans/PublicSans-Black.woff) format("woff"), url(../fonts/public-sans/PublicSans-Black.ttf) format("truetype")
 }
 
+
 @font-face {
     font-family: Merriweather;
     font-style: normal;
@@ -3881,4 +3882,10 @@ input[type=search] {
     top: 0;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out
+}
+
+/* add to have fixed height for cards */
+
+article.usa-card {
+    height: 450px;
 }
