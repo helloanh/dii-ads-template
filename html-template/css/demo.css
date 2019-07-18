@@ -63,3 +63,7 @@ select.select-name {
 .usa-button-demo:hover {
 	background-color: #205493;
 }
+
+#business-rules *, #data-rules * {
+	background-color: #0071bc;
+}
