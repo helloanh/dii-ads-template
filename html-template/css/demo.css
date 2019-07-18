@@ -67,3 +67,13 @@ select.select-name {
 #business-rules *, #data-rules * {
 	background-color: #0071bc;
 }
+
+.usa-section-gray {
+    background-color: white;
+    color: #fff;
+}
+
+h1.va-page-title {
+    color: black;
+    text-align: center;
+}

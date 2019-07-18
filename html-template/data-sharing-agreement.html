@@ -9,8 +9,7 @@
     <meta name="author" content="DII ADS Template">
     <meta name="keywords" content="website, design, usability, accessibility" />
     <meta name="description" content="DII ADS Template" />
-    <title>
-    DII ADS Template </title>
+    <title> Data Sharing Agreement </title>
     <link rel="canonical" href="https://www.va.gov/web/" />
     <!--Open Graph-->
     <meta property="og:locale" content="en_US" />
@@ -37,14 +36,14 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
     
-    <title>DII Data Integration and Interoperability (DII) Enterprise Design Pattern</title>
+    <title>DII Authoritative Data Sources Cloud Template - Data Sharing Agreement </title>
   </head>
   <a class="usa-skipnav" href="#main-content">Skip to main content</a>
   <header class="usa-header usa-header-extended" role="banner">    
     <!-- Site Menu BEGIN -->
     <div class="usa-navbar">
       <button class="usa-menu-btn">Menu</button>
-      <div class="usa-logo" id="logo"> <em class="usa-logo-text"> <a href="/web/index.cfm" accesskey="1" title="Home" aria-label="Home"><span class="va-logo">VA</span> | Data Integration and Interoperability (DII) Enterprise Design Pattern (EDP) </a> </em> </div>
+      <div class="usa-logo" id="logo"> <em class="usa-logo-text"> <a href="/web/index.cfm" accesskey="1" title="Home" aria-label="Home"><span class="va-logo">VA</span> | Data Sharing Agreement </a> </em> </div>
     </div>
     <nav role="navigation" class="usa-nav">
       <div class="usa-nav-inner">
@@ -116,184 +115,39 @@
   <main id="main-content">
     <section class="usa-section usa-section-gray ">
       <div class="usa-grid">
-        <h1 class="va-page-title">Authoritative Data Sources (ADS)</h1>
+
+        <img src="img/Official_VA_Seal.png" style="margin:-3rem auto; position:relative;max-width:20rem;" alt="Official VA seal" /> <h1 class="va-page-title">Data Sharing Agreement </h1>
       </div>
     </section>
     <section class="usa-section usa-section-light va-colpadding_20">
       <div class="usa-grid">
         <article class="usa-width-one-whole">
+            <ol>
+              <li>
+                  <h3> 1. Purpose of the Data Sharing Agreements in General</h3>
+                  <ul>
+                      <li> a. To Maintain Security, Quality, etc ... </li>
+                      <li> test test test </li>
+                  </ul>
 
+              </li>
+              <li>
+                <h3> 2. Authority</h3>
+              </li>
 
-          <div class="usa-width-one-half">
-            <article class="usa-card">
-              <div class="usa-card_divider usa-card--blue-darkest"> <span class="usa-card_title"><abbr title="Department of Veterans Affairs">Project Details</span></div>
-              <div class="usa-card_section">
-                <div class="row">
-                  <div class="input-group">
-                     <div class="input-group">
-                           <form class="button-group usa-button-secondary">
-                            <ul>
-                              <li>
-                                <label class="label-name" for="org">Name<span style="padding-right: 50px;"></span></label>
-                               <input placeholder="First, Last" type="name" id="name" aria-describedby="nameHelp" placeholder="First, Last" class="form-control">
-                              </li>
-
-                              <li>
-                                 <label for="org">Organization</label>
-                                  <select class="form-control" id="org">
-                                    <option>VHA</option>
-                                    <option>VBA</option>
-                                    <option>MCA</option>
-                                    <option>OIT</option>
-                                    <option>VACO</option>
-                                  </select>
-                              </li>
-                              <li>
-                                <label for="org">Portfolio<span style="padding-right: 30px;"></span></label>
-                                  <select class="form-control" id="portfolio">
-                                    <option>Select Portfolio</option>
-                                    <option>Corporate Services (116)</option>
-                                    <option>Benefits and Memorial Services (75)</option>
-                                    <option>Enterprise Business Services (75)</option>
-                                    <option>Health Services (296)</option>
-                                    <option>Technology Services (157)</option>
-                                  </select>
-                              </li>
-                              <li>
-                                
-                                  <div class="col-sm-10">
-                                    <button type="submit" class="usa-button-demo">Sign in</button>
-                                  </div>
-                             
-                              </li>
-                            </ul>
-                              
-                            </form>
-                      </div>
-                  </div>
-                </div>
-            </article>
-          </div>
-
-          <div class="usa-width-one-half">
-            <article class="usa-card">
-              <div class="usa-card_divider usa-card--blue-darkest"> <span class="usa-card_title"><abbr title="Department of Veterans Affairs"> ADS Selection & API discovery</span></div>  
-              <div class="usa-card_section">
-                  <div class="row">
-                    <div class="input-group">
-                          <form class="button-group usa-button-secondary">
-
-                            <ul>
-                              <li>
-                                <label class="avail-ads" for="org">Available ADS</label>
-                                  <select class="" id="org">
-                                  <option>IAM MVI</option>
-                                  <option>eCAI</option>
-                                  <option>CMS</option>
-                                  <option>HRIS</option>
-                                  <option>VADIR</option>
-                                </select>
-                              </li>
-
-                              <li>
-                                 <li>
-                                <label class="avail-ads" for="api-dis">API Discovery</label>
-                                  <select onChange="window.open(this.value)" class="" id="apidis">
-                                  <option value="">Select Service</option>
-                                  <option value="https://developer.va.gov">MMVIService</option>
-                                  <option value="https://escp.va.gov">MviSyncService</option>
-                                  <option>MviWebService </option>
-                                </select>
-                              </li>
-                              <li>Exception</li>
-                            </ul>
-                           <!--  <script>
-                              document.getElementById('apidis').onchange = function() {
-                                  window.location.href = this.children[this.selectedIndex].getAttribute('href');
-                              }
-                          </script>
- -->
-                          </form>
-                    </div>
-
-                  </div>
-               
-              </div>
-            </article>
-          </div><!--end usa-width-one-half!-->
+              <li> 
+                <h3> 3. General Information about DSAs</h3>
+              </li>
+              <li>
+                <h3> 4. Business Protocols / Rules Section</h3>
+              </li>
+            </ol>
 
 
         </article>
       </div>
     </section>
-    <section class="usa-section usa-section-light">
-      <div class="usa-grid">
-        <article class="usa-width-one-whole">
-          <div class="usa-width-one-half">
-            <article class="usa-card">
-              <div class="usa-card_divider usa-card--blue-darkest"> <span class="usa-card_title"><abbr title="Department of Veterans Affairs">Management Protocol</span></div>
-              <div class="usa-card_section">
-                  <form class="button-group usa-button-secondary">
-                        <ul>
-                          <li>
-                             <label class="avail-ads" for="magpro">Management Protocol</label>
-                              <select onChange="window.open(this.value)" class="form-control" id="magpro">
-                                <option>Management Protocol Artifacts</option>
-                                <option value="data-sharing-agreement.html">Data Sharing Aggreement</option>
-                                <option>Statement of Purpose</option>
-                                <optgroup label="Access Rules" class="usa-optgroup usa-optgroup option">
-                                  <option id="business-rules">Business Rules</option>
-                                    <option style="color: #0071bc;"><span style="padding-left: 20px;"></span> Information Class</option>
-                                    <option><span style="padding-left: 20px;">Interface Models</span></option>
-                                    <option><span style="padding-left: 20px;">Data Format</span></option>
-                                    <option><span style="padding-left: 20px;">Message Protocol</span></option>
-                                    <option><span style="padding-left: 20px;">Authentication</span></option>
-                                    <option><span style="padding-left: 20px;">Exception Handling</span></option>
-                                  <option id="data-rules">Data Rules</option>
-                                    <option><span style="padding-left: 20px;"></span>Federation</option>
-                                    <option><span style="padding-left: 20px;"></span>Identity Proofing</option>
-                                    <option><span style="padding-left: 20px;"></span>Identity Provisioning</option>
-                                    <option><span style="padding-left: 20px;"></span>Multi-Factor Authentication</option>
-                                    <option><span style="padding-left: 20px;"></span>Single Sign On</option>
-                                    <option><span style="padding-left: 20px;"></span>User Account Restoration</option>
-                                </optgroup>
-                                <option>Usage Policies</option>
-                                <option>Data Quality Requirements</option>
-                              </select>
-                          </li>
-                        </ul>
-                    </form>  
-              </div>
-            </article>
-          </div>
-          <div class="usa-width-one-half">
-            <article class="usa-card">
-              <div class="usa-card_divider usa-card--blue-darkest"> <span class="usa-card_title"><abbr title="Department of Veterans Affairs">Technical Protocol</span></div>
-              <div class="usa-card_section">
-                 <div class="form-group">
-                    <form class="button-group usa-button-secondary">
-                       <ul>
-                          <li>
-                            <label class="avail-ads" for="techpro">Technical Protocol</label>
-                            <select class="form-control" id="techpro">
-                              <option>Technical Protocol Artifacts</option>
-                              <option>Information Class</option>
-                              <option>Interface Models</option>
-                              <option>Data Format</option>
-                              <option>Message Protocol</option>
-                              <option>Authentication</option>
-                              <option>Exception Handling</option>
-                            </select>
-                          </li>
-                        </ul>
-                    </form>
-                  </div>
-              </div>
-            </article>
-          </div>
-        </article>
-      </div>
-    </section>
+   
   </main>
   <footer class="usa-section usa-section-lighter va-border-top" role="contentinfo">
     <div class="usa-grid va-margin_bottom">
