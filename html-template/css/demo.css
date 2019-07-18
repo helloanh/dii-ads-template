@@ -1,7 +1,7 @@
 /* add to have fixed height for cards */
 
 article.usa-card {
-    height: 300px;
+    height: 400px;
 }
 
 .button-group label {
@@ -12,6 +12,54 @@ optgroup.usa-optgroup option {
     /*display: none;*/
 }
 
-optgroup.user-optgroup {
+/*optgroup.user-optgroup {
     color: black;
+}*/
+
+ul {
+    list-style: none;
+}
+
+select {color: white; max-width: 30rem;}
+
+input {
+
+	max-width: 30rem;
+}
+
+.form-inline { 
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+select.select-name {
+    background: white;
+}
+
+.usa-button-demo {
+	 -webkit-font-smoothing: antialiased;
+    margin-top: .5em;
+    margin-right: .5em;
+    margin-bottom: .5em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #0071bc;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.usa-button-demo:hover {
+	background-color: #205493;
 }

@@ -32,7 +32,7 @@
 
     <!-- addition for this landing page -->
     <link href="css/demo.css" rel="stylesheet" />
-   
+
     <!--Base Javascript-->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
@@ -122,47 +122,66 @@
     <section class="usa-section usa-section-light va-colpadding_20">
       <div class="usa-grid">
         <article class="usa-width-one-whole">
+
+
           <div class="usa-width-one-half">
             <article class="usa-card">
               <div class="usa-card_divider usa-card--blue-darkest"> <span class="usa-card_title"><abbr title="Department of Veterans Affairs">Project Details</span></div>
               <div class="usa-card_section">
-                <form class="button-group usa-button-secondary">
-                  <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="name" class="form-control" id="name" aria-describedby="nameHelp" placeholder="First, Last">
+                <div class="row">
+                  <div class="input-group">
+                     <div class="input-group">
+                           <form class="button-group usa-button-secondary">
+                            <ul>
+                              <li>
+                                <label class="label-name" for="org">Name<span style="padding-right: 50px;"></span></label>
+                               <input placeholder="First, Last" type="name" id="name" aria-describedby="nameHelp" placeholder="First, Last" class="form-control">
+                              </li>
+
+                              <li>
+                                 <label for="org">Organization</label>
+                                  <select class="form-control" id="org">
+                                    <option>VHA</option>
+                                    <option>VBA</option>
+                                    <option>MCA</option>
+                                    <option>OIT</option>
+                                    <option>VACO</option>
+                                  </select>
+                              </li>
+                              <li>
+                                <label for="org">Portfolio<span style="padding-right: 30px;"></span></label>
+                                  <select class="form-control" id="portfolio">
+                                    <option>Select Portfolio</option>
+                                    <option>Corporate Services (116)</option>
+                                    <option>Benefits and Memorial Services (75)</option>
+                                    <option>Enterprise Business Services (75)</option>
+                                    <option>Health Services (296)</option>
+                                    <option>Technology Services (157)</option>
+                                  </select>
+                              </li>
+                              <li>
+                                
+                                  <div class="col-sm-10">
+                                    <button type="submit" class="usa-button-demo">Sign in</button>
+                                  </div>
+                             
+                              </li>
+                            </ul>
+                              
+                            </form>
+                      </div>
                   </div>
-                  
-                  <div class="form-group" id="app">
-                    <label for="portfolio">Portfolio</label>
-                    <select v-model="selected" class="form-control" id="portfolio">
-                      <option v-for="portfolio in portfolios" v-bind:value="{ id: portfolio.id, text: portfolio.name }">
-                       {{ portfolio.name }}
-                     </option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="org">Organization</label>
-                    <select class="form-control" id="org">
-                      <option>VHA</option>
-                      <option>VBA</option>
-                      <option>MCA</option>
-                      <option>OIT</option>
-                      <option>VACO</option>
-                    </select>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-              </div>
+                </div>
             </article>
           </div>
+
           <div class="usa-width-one-half">
             <article class="usa-card">
-              <div class="usa-card_divider usa-card--blue-darkest"> <span class="usa-card_title"><abbr title="Department of Veterans Affairs"> ADS Selection & API discovery</span></div>
+              <div class="usa-card_divider usa-card--blue-darkest"> <span class="usa-card_title"><abbr title="Department of Veterans Affairs"> ADS Selection & API discovery</span></div>  
               <div class="usa-card_section">
                   <div class="row">
                     <div class="input-group">
-                       <h4> {{ portfolio.name }}</h4>
-                         <form class="button-group usa-button-secondary">
+                          <form class="button-group usa-button-secondary">
 
                             <ul>
                               <li>
@@ -175,9 +194,25 @@
                                   <option>VADIR</option>
                                 </select>
                               </li>
-                              <li>API discovery</li>
+
+                              <li>
+                                 <li>
+                                <label class="avail-ads" for="api-dis">API Discovery</label>
+                                  <select onChange="window.open(this.value)" class="" id="apidis">
+                                  <option value="">Select Service</option>
+                                  <option value="https://developer.va.gov">MMVIService</option>
+                                  <option value="https://escp.va.gov">MviSyncService</option>
+                                  <option>MviWebService </option>
+                                </select>
+                              </li>
                               <li>Exception</li>
                             </ul>
+                           <!--  <script>
+                              document.getElementById('apidis').onchange = function() {
+                                  window.location.href = this.children[this.selectedIndex].getAttribute('href');
+                              }
+                          </script>
+ -->
                           </form>
                     </div>
 
@@ -185,45 +220,49 @@
                
               </div>
             </article>
-          </div>
+          </div><!--end usa-width-one-half!-->
+
+
         </article>
       </div>
     </section>
-    <section class="usa-section usa-section-light va-colpadding_20">
+    <section class="usa-section usa-section-light">
       <div class="usa-grid">
         <article class="usa-width-one-whole">
           <div class="usa-width-one-half">
             <article class="usa-card">
               <div class="usa-card_divider usa-card--blue-darkest"> <span class="usa-card_title"><abbr title="Department of Veterans Affairs">Management Protocol</span></div>
               <div class="usa-card_section">
-
-                 <div class="form-group">
-                    <label class="avail-ads" for="magpro">Management Protocol</label>
-                    <select class="form-control" id="magpro">
-                      <option>Statement of Purpose</option>
-                      <optgroup label="Access Rules" class="usa-optgroup usa-optgroup option">
-                        <option>Authorization Planning</option>
-                        <option>Federation</option>
-                        <option>Identity Proofing</option>
-                        <option>Identity Provisioning</option>
-                        <option>Multi-Factor Authentication</option>
-                        <option>Single Sign On</option>
-                        <option>User Account Restoration</option>
-                      </optgroup>
-                       <optgroup label="Business Rules" class="usa-optgroup usa-optgroup option">
-                        <option>Information Class</option>
-                        <option>Interface Models</option>
-                        <option>Data Format</option>
-                        <option>Message Protocol</option>
-                        <option>Authentication</option>
-                        <option>Exception Handling</option>
-                      </optgroup>
-                      <option>Data Rules</option>
-                      <option>Usage Policies</option>
-                      <option>Data Quality Requirements</option>
-                    </select>
-                  </div>
-               
+                  <form class="button-group usa-button-secondary">
+                        <ul>
+                          <li>
+                             <label class="avail-ads" for="magpro">Management Protocol</label>
+                              <select class="form-control" id="magpro">
+                                <option>Statement of Purpose</option>
+                                <optgroup label="Access Rules" class="usa-optgroup usa-optgroup option">
+                                  <option>Authorization Planning</option>
+                                  <option>Federation</option>
+                                  <option>Identity Proofing</option>
+                                  <option>Identity Provisioning</option>
+                                  <option>Multi-Factor Authentication</option>
+                                  <option>Single Sign On</option>
+                                  <option>User Account Restoration</option>
+                                </optgroup>
+                                 <optgroup label="Business Rules" class="usa-optgroup usa-optgroup option">
+                                  <option>Information Class</option>
+                                  <option>Interface Models</option>
+                                  <option>Data Format</option>
+                                  <option>Message Protocol</option>
+                                  <option>Authentication</option>
+                                  <option>Exception Handling</option>
+                                </optgroup>
+                                <option>Data Rules</option>
+                                <option>Usage Policies</option>
+                                <option>Data Quality Requirements</option>
+                              </select>
+                          </li>
+                        </ul>
+                    </form>  
               </div>
             </article>
           </div>
@@ -232,15 +271,21 @@
               <div class="usa-card_divider usa-card--blue-darkest"> <span class="usa-card_title"><abbr title="Department of Veterans Affairs">Technical Protocol</span></div>
               <div class="usa-card_section">
                  <div class="form-group">
-                    <label class="avail-ads" for="techpro">Technical Protocol</label>
-                    <select class="form-control" id="techpro">
-                      <option>Information Class</option>
-                      <option>Interface Models</option>
-                      <option>Data Format</option>
-                      <option>Message Protocol</option>
-                      <option>Authentication</option>
-                      <option>Exception Handling</option>
-                    </select>
+                    <form class="button-group usa-button-secondary">
+                       <ul>
+                          <li>
+                            <label class="avail-ads" for="techpro">Technical Protocol</label>
+                            <select class="form-control" id="techpro">
+                              <option>Information Class</option>
+                              <option>Interface Models</option>
+                              <option>Data Format</option>
+                              <option>Message Protocol</option>
+                              <option>Authentication</option>
+                              <option>Exception Handling</option>
+                            </select>
+                          </li>
+                        </ul>
+                    </form>
                   </div>
               </div>
             </article>

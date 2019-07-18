@@ -2236,7 +2236,7 @@ dl {
 .usa-card--blue-darkest,
 .usa-card--gray-dark,
 .usa-card--red-darkest {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     overflow: hidden;
     border: none;
     background: #fff;
@@ -3147,9 +3147,6 @@ a.back-to-top:focus {
     padding: 1rem
 }
 
-.button-group input {
-    display: none
-}
 
 .button-group label {
     margin-bottom: 0;
