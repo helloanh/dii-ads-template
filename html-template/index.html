@@ -46,66 +46,7 @@
       <button class="usa-menu-btn">Menu</button>
       <div class="usa-logo" id="logo"> <em class="usa-logo-text"> <a href="/web/index.cfm" accesskey="1" title="Home" aria-label="Home"><span class="va-logo">VA</span> | Data Integration and Interoperability (DII) Enterprise Design Pattern (EDP) </a> </em> </div>
     </div>
-    <nav role="navigation" class="usa-nav">
-      <div class="usa-nav-inner">
-        <button class="usa-nav-close"> <img src="/web/_media/img/icons/close.svg" alt="close"></button>
-        <ul class="usa-nav-primary usa-accordion">
-          <li><a href="/web/index.cfm"  class="usa-nav-link" ><i class="fas fa-home icon-left"></i> Home</a></li>
-          
-          <li class="nav-mobile">
-            <button class="usa-accordion-button usa-nav-link" aria-expanded="false" aria-controls="va-programs">
-            <span>VA Programs and Service</span>
-            </button>
-            
-            <li class="nav-mobile">
-              <button class="usa-accordion-button usa-nav-link" aria-expanded="false" aria-controls="va-resources">
-              <span>Additional VA Resources</span>
-              </button>
-              <ul id="va-resources" class="usa-nav-submenu">
-                <li><a href="https://explore.va.gov">Explore VA</a></li>
-                <li><a href="https://www.va.gov/landing2_locations.htm">Find a VA Location</a></li>
-                <li><a href="https://www.va.gov/vaforms/">VA Forms</a></li>
-                <li><a href="https://www.va.gov/health/">Veterans Health Administration (VHA)</a></li>
-                <li><a href="https://benefits.va.gov/benefits/">Veterans Benefits Administration (VBA)</a></li>
-                <li><a href="https://cem.va.gov/">National Cemetery Administration (NCA)</a></li>
-                <li><a href="https://www.va.gov/jobs/">Careers at VA</a></li>
-                <li><a href="https://www.va.gov/COMMUNITYCARE/programs/veterans/VCP/index.asp">Veterans Choice Program</a></li>
-                <li><a href="https://www.accesstocare.va.gov/">Access to Care</a></li>
-                <li><a href="https://www.va.gov/landing2_business.htm">Doing Business with VA</a></li>
-                <li><a href="https://www.va.gov/opa/">Public Affairs</a></li>
-                <li><a href="https://www.va.gov/opa/pressrel/">News Releases</a></li>
-              </ul>
-              <li class="nav-mobile">
-                <button class="usa-accordion-button usa-nav-link" aria-expanded="false" aria-controls="policy">
-                <span>Legal and Administrative</span>
-                </button>
-                <ul id="policy" class="usa-nav-submenu">
-                  <li><a href="https://www.va.gov/oei/docs/VA2018-2024strategicPlan.pdf">VA Strategic Plan</a></li>
-                  <li><a href="https://www.oprm.va.gov/privacy/">Privacy</a></li>
-                  <li><a href="hhttps://www.va.gov/web/standards/disclaimer.cfm">Disclaimers</a></li>
-                  <li><a href="https://www.va.gov/oig/">Inspector General</a></li>
-                  <li><a href="https://www.oprm.va.gov/foia/">FOIA</a></li>
-                  <li><a href="https://www.va.gov/orm/NOFEAR_Select.asp">No FEAR Act</a></lin>
-                  <li><a href="https://www.va.gov/accountability">Whistleblower and Rights Protection</a></li>
-                  <li><a href="https://www.va.gov/web/standards/">Website Policies</a></li>
-                  <li><a href="https://www.data.va.gov">Open Data</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <div class="usa-nav-secondary">
-          
-          <ul class="usa-unstyled-list usa-nav-secondary-links">
-            <li class="js-search-button-container">
-              <button class="usa-header-search-button js-search-button ">Search VA</button>
-            </li>
-            <li><a href="/web/sitemap.cfm"><i class="fa fa-sitemap icon-left" aria-hidden="true"></i>Sitemap</a></li>
-            <li><a href="/web/contacts.cfm"><i class="fa fa-address-book icon-left" aria-hidden="true"></i>Contacts</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+   
     <!-- Site Menu End -->
   </header>
   <div class="usa-overlay"></div>
@@ -159,12 +100,9 @@
                                     <option>Technology Services (157)</option>
                                   </select>
                               </li>
+                                 
                               <li>
-                                
-                                  <div class="col-sm-10">
-                                    <button type="submit" class="usa-button-demo">Sign in</button>
-                                  </div>
-                             
+                                  <button type="submit" class="usa-button-demo">Submit</button>
                               </li>
                             </ul>
                               
@@ -180,7 +118,7 @@
               <div class="usa-card_divider usa-card--blue-darkest"> <span class="usa-card_title"><abbr title="Department of Veterans Affairs"> ADS Selection & API discovery</span></div>  
               <div class="usa-card_section">
                   <div class="row">
-                    <div class="input-group">
+                    <div class="input-group input-group-ads">
                           <form class="button-group usa-button-secondary">
 
                             <ul>
@@ -206,13 +144,12 @@
                                 </select>
                               </li>
                               <li>Exception</li>
+                                 <li>      
+                                  <button type="submit" class="usa-button-demo">Submit</button>
+                              </li>
                             </ul>
-                           <!--  <script>
-                              document.getElementById('apidis').onchange = function() {
-                                  window.location.href = this.children[this.selectedIndex].getAttribute('href');
-                              }
-                          </script>
- -->
+                          
+                          
                           </form>
                     </div>
 
@@ -236,7 +173,32 @@
                   <form class="button-group usa-button-secondary">
                         <ul>
                           <li>
-                             <label class="avail-ads" for="magpro">Management Protocol</label>
+                            <label class="test" for="test">Data Sharing Agreement</label>
+                              <select onChange="window.open(this.value)" class="form-control" id="test">
+                                <option value="pdf-file-name.pdf">Download pdf</option>
+                              </select>
+                          </li>
+                          <li> 
+                            <label class="avail-ads" for="access-rules"><span style="padding-right:83px;">Access Rules</span></label>
+                              <select class="form-control" id="ac">
+                                <option>Business Rules</option>
+                                <option>Data Rules</option>
+                              </select>
+                          </li>
+                          <li>
+                            <label class="test" for="test"><span style="padding-right:43px;">Statement of Work</span></label>
+                              <select onChange="window.open(this.value)" class="form-control" id="test">
+                                <option value="statement-of-work.pdf">Download pdf</option>
+                              </select>
+                          </li>
+                          <li>
+                            <label class="test" for="test"><span style="padding-right:132px;">Quality</span></label>
+                              <select onChange="window.open(this.value)" class="form-control" id="test">
+                                <option value="quality.pdf">Download pdf</option>
+                              </select>
+                          </li>
+                          
+                            <!--  <label class="avail-ads" for="magpro">Management Protocol</label>
                               <select onChange="window.open(this.value)" class="form-control" id="magpro">
                                 <option>Management Protocol Artifacts</option>
                                 <option value="data-sharing-agreement.html">Data Sharing Aggreement</option>
@@ -260,7 +222,12 @@
                                 <option>Usage Policies</option>
                                 <option>Data Quality Requirements</option>
                               </select>
-                          </li>
+                          </li> -->
+                           
+                            <li>
+                                  <button type="submit" class="usa-button-demo">Submit</button>
+                              </li>
+                    
                         </ul>
                     </form>  
               </div>
@@ -274,7 +241,33 @@
                     <form class="button-group usa-button-secondary">
                        <ul>
                           <li>
-                            <label class="avail-ads" for="techpro">Technical Protocol</label>
+                              <label class="test" onChange="window.open(this.value)" for="test">
+                                
+                                <span style="padding-right:50px;">Crud Matrix</span>
+                              </label>
+                              <select class="form-control" id="test">
+                                <option value="change-to-your-own-pdf-name.pdf">Download pdf</option>
+                              </select>
+                          </li>
+                          <li>
+                             <label class="test" for="test">
+                                <span style="padding-right:8px;">Information Class</span>
+                              </label>
+                              <select class="form-control" id="test">
+                                <option value="change-to-your-own-pdf-name.pdf">Download pdf</option>
+                            </select>
+                          </li>
+
+                          <li>
+                              <label class="test" for="test">
+                                <span style="padding-right:105px;">APIs</span>
+                              </label>
+                              <select class="form-control" id="test">
+                                <option>Value A </option>
+                                <option>Value B</option>
+                              </select>
+                          </li>
+                            <!-- <label class="avail-ads" for="techpro">Technical Protocol</label>
                             <select class="form-control" id="techpro">
                               <option>Technical Protocol Artifacts</option>
                               <option>Information Class</option>
@@ -284,8 +277,23 @@
                               <option>Authentication</option>
                               <option>Exception Handling</option>
                             </select>
+                          </li> -->
+                          <li>
+                              <label class="test" for="test">
+                                <span style="padding-right:48px;">IAM Access</span>
+                              </label>
+                              <select class="form-control" id="test">
+                                <option>Download Pdf </option>
+                                <option>Create New</option>
+                              </select>
                           </li>
+                           <li>
+                             <button type="submit" class="usa-button-demo">Submit</button>
+                          </li>
+                        
                         </ul>
+                            
+                       
                     </form>
                   </div>
               </div>

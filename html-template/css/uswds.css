@@ -3717,15 +3717,10 @@ input[type=search] {
     }
 }
 
-.usa-section {
-    padding-top: 3rem;
-    padding-bottom: 3rem
-}
-
 @media screen and (min-width:800px) {
     .usa-section {
-        padding-top: 6rem;
-        padding-bottom: 6rem
+        padding-top: 2.75rem;
+        padding-bottom: 2.75rem
     }
 }
 
