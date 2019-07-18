@@ -1,12 +1,12 @@
-# DDI ADS Template
+# DDI ADS Prototypes
 
-## Templates for Azure:  
+## Prototypes for Azure:  
 
 - HTML5  
 - ASP.NET  
 - [Rails](/ruby-on-rails-template/ruby-template)
 
-## Templates for AWS:  
+## Prototypes for AWS:  
 - HTML5  
 - ASP.NET  
 - GO  
