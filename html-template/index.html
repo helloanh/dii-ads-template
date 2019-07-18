@@ -24,11 +24,14 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:description" content="DII ADS Template" />
     <meta name="twitter:image" content="" />
-    <!-- Stylesheets-->
+    <!-- Stylesheets from OIT VA site-->
     <link href="https://cdn.eo.va.gov/vendor/fa5/current/css/all.css" rel="stylesheet" />
     <link href="css/uswds.css" rel="stylesheet" />
     <link href="css/va-core.css" rel="stylesheet" />
     <link href="css/va-theme.css" rel="stylesheet" />
+
+    <!-- addition for this landing page -->
+    <link href="css/demo.css" rel="stylesheet" />
    
     <!--Base Javascript-->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -37,9 +40,7 @@
     <title>DII Authoritative Data Sources Cloud Template - Home </title>
   </head>
   <a class="usa-skipnav" href="#main-content">Skip to main content</a>
-  <header class="usa-header usa-header-extended" role="banner">
-    
-    
+  <header class="usa-header usa-header-extended" role="banner">    
     <!-- Site Menu BEGIN -->
     <div class="usa-navbar">
       <button class="usa-menu-btn">Menu</button>
@@ -125,10 +126,10 @@
             <article class="usa-card">
               <div class="usa-card_divider usa-card--blue-darkest"> <span class="usa-card_title"><abbr title="Department of Veterans Affairs">Project Details</span></div>
               <div class="usa-card_section">
-                <form>
+                <form class="button-group usa-button-secondary">
                   <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="name" class="form-control" id="name" aria-describedby="nameHelp">
+                    <input type="name" class="form-control" id="name" aria-describedby="nameHelp" placeholder="First, Last">
                   </div>
                   
                   <div class="form-group" id="app">
@@ -145,6 +146,8 @@
                       <option>VHA</option>
                       <option>VBA</option>
                       <option>MCA</option>
+                      <option>OIT</option>
+                      <option>VACO</option>
                     </select>
                   </div>
                   <button type="submit" class="btn btn-primary">Submit</button>
@@ -156,11 +159,30 @@
             <article class="usa-card">
               <div class="usa-card_divider usa-card--blue-darkest"> <span class="usa-card_title"><abbr title="Department of Veterans Affairs"> ADS Selection & API discovery</span></div>
               <div class="usa-card_section">
-                <ul>
-                  <li>Available ADS: <strong>{{selected.text}}</strong></li>
-                  <li>API discovery</li>
-                  <li>Exception</li>
-                </ul>
+                  <div class="row">
+                    <div class="input-group">
+                       <h4> {{ portfolio.name }}</h4>
+                         <form class="button-group usa-button-secondary">
+
+                            <ul>
+                              <li>
+                                <label class="avail-ads" for="org">Available ADS</label>
+                                  <select class="" id="org">
+                                  <option>IAM MVI</option>
+                                  <option>eCAI</option>
+                                  <option>CMS</option>
+                                  <option>HRIS</option>
+                                  <option>VADIR</option>
+                                </select>
+                              </li>
+                              <li>API discovery</li>
+                              <li>Exception</li>
+                            </ul>
+                          </form>
+                    </div>
+
+                  </div>
+               
               </div>
             </article>
           </div>
@@ -174,16 +196,34 @@
             <article class="usa-card">
               <div class="usa-card_divider usa-card--blue-darkest"> <span class="usa-card_title"><abbr title="Department of Veterans Affairs">Management Protocol</span></div>
               <div class="usa-card_section">
-                <ul>
-                  <li>Data Sharing Agreement</li>
-                  <li>Access Rules
-                    <ul>
-                      <li>Business Rules</li>
-                      <li>Data Rules</li>
-                    </ul>
-                  </li>
-                  
-                </ul>
+
+                 <div class="form-group">
+                    <label class="avail-ads" for="magpro">Management Protocol</label>
+                    <select class="form-control" id="magpro">
+                      <option>Statement of Purpose</option>
+                      <optgroup label="Access Rules" class="usa-optgroup usa-optgroup option">
+                        <option>Authorization Planning</option>
+                        <option>Federation</option>
+                        <option>Identity Proofing</option>
+                        <option>Identity Provisioning</option>
+                        <option>Multi-Factor Authentication</option>
+                        <option>Single Sign On</option>
+                        <option>User Account Restoration</option>
+                      </optgroup>
+                       <optgroup label="Business Rules" class="usa-optgroup usa-optgroup option">
+                        <option>Information Class</option>
+                        <option>Interface Models</option>
+                        <option>Data Format</option>
+                        <option>Message Protocol</option>
+                        <option>Authentication</option>
+                        <option>Exception Handling</option>
+                      </optgroup>
+                      <option>Data Rules</option>
+                      <option>Usage Policies</option>
+                      <option>Data Quality Requirements</option>
+                    </select>
+                  </div>
+               
               </div>
             </article>
           </div>
@@ -191,12 +231,17 @@
             <article class="usa-card">
               <div class="usa-card_divider usa-card--blue-darkest"> <span class="usa-card_title"><abbr title="Department of Veterans Affairs">Technical Protocol</span></div>
               <div class="usa-card_section">
-                <ul>
-                  <li>Environments</li>
-                  <li>Data Elements</li>
-                  <li>APIs</li>
-                  <li>CRUD and HTTP verbs</li>
-                </ul>
+                 <div class="form-group">
+                    <label class="avail-ads" for="techpro">Technical Protocol</label>
+                    <select class="form-control" id="techpro">
+                      <option>Information Class</option>
+                      <option>Interface Models</option>
+                      <option>Data Format</option>
+                      <option>Message Protocol</option>
+                      <option>Authentication</option>
+                      <option>Exception Handling</option>
+                    </select>
+                  </div>
               </div>
             </article>
           </div>
@@ -287,7 +332,6 @@ style="margin:-3rem auto; position:relative;max-width:10rem;" alt="Official VA s
   <span><a href="https://www.va.gov/web/standards/">Website Policies</a></span>
   <span><a href="https://www.data.va.gov">Open Data</a></span>
   <br />
-  Page content was last updated: Friday, March 23, 2018
   <p>
   </div>
 </section>
@@ -316,7 +360,7 @@ style="margin:-3rem auto; position:relative;max-width:10rem;" alt="Official VA s
     </div>
   </div>
  
-
+   
     <!--Vue.js Library -->
     <!-- production version, optimized for size and speed -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>

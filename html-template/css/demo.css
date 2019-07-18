@@ -1,0 +1,17 @@
+/* add to have fixed height for cards */
+
+article.usa-card {
+    height: 300px;
+}
+
+.button-group label {
+    margin-right: 1em;
+}
+
+optgroup.usa-optgroup option {
+    /*display: none;*/
+}
+
+optgroup.user-optgroup {
+    color: black;
+}

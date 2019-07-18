@@ -3884,8 +3884,3 @@ input[type=search] {
     transition: all .2s ease-in-out
 }
 
-/* add to have fixed height for cards */
-
-article.usa-card {
-    height: 450px;
-}
