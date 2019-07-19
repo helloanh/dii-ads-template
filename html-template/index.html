@@ -29,395 +29,259 @@
     <link href="css/uswds.css" rel="stylesheet" />
     <link href="css/va-core.css" rel="stylesheet" />
     <link href="css/va-theme.css" rel="stylesheet" />
-
     <!-- addition for this landing page -->
     <link href="css/demo.css" rel="stylesheet" />
-
     <!--Base Javascript-->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-
     
     <title>DII Data Integration and Interoperability (DII) Enterprise Design Pattern</title>
   </head>
   <a class="usa-skipnav" href="#main-content">Skip to main content</a>
-  <header class="usa-header usa-header-extended" role="banner">    
+  <header class="usa-header usa-header-extended" role="banner">
     <!-- Site Menu BEGIN -->
     <div class="usa-navbar">
       <button class="usa-menu-btn">Menu</button>
       <div class="usa-logo" id="logo"> <em class="usa-logo-text"> <a href="/web/index.cfm" accesskey="1" title="Home" aria-label="Home"><span class="va-logo">VA</span> | Data Integration and Interoperability (DII) Enterprise Design Pattern (EDP) </a> </em> </div>
     </div>
-   
+    
     <!-- Site Menu End -->
   </header>
   <div class="usa-overlay"></div>
-
   <div id="app">
-
-
-  <main id="main-content">
-    <section class="usa-section usa-section-gray ">
-      <div class="usa-grid">
-        <h1 class="va-page-title">Authoritative Data Sources (ADS)</h1>
-      </div>
-    </section>
-    <section class="usa-section usa-section-light va-colpadding_20">
-      <div class="usa-grid">
-        <article class="usa-width-one-whole">
-
-
-          <div class="usa-width-one-half">
-            <article class="usa-card">
-              <div class="usa-card_divider usa-card--blue-darkest"> <span class="usa-card_title"><abbr title="Department of Veterans Affairs">Project Details</span></div>
-              <div class="usa-card_section">
-                <div class="row">
-                  <div class="input-group">
-                     <div class="input-group">
-                           <form class="button-group usa-button-secondary">
-                            <ul>
-                              <li>
-                                <label class="label-name" for="org">Name<span style="padding-right: 50px;"></span></label>
-                               <input placeholder="First, Last" type="name" id="name" aria-describedby="nameHelp" placeholder="First, Last" class="form-control">
-                              </li>
-
-                              <li>
-                                 <label for="org">Organization</label>
-                                  <select class="form-control" id="org">
-                                    <option>VHA</option>
-                                    <option>VBA</option>
-                                    <option>MCA</option>
-                                    <option>OIT</option>
-                                    <option>VACO</option>
-                                  </select>
-                              </li>
-                              <li>
-                                <label for="org">Portfolio<span style="padding-right: 30px;"></span></label>
-                                  <select class="form-control" id="portfolio">
-                                    <option>Select Portfolio</option>
-                                    <option>Corporate Services (116)</option>
-                                    <option>Benefits and Memorial Services (75)</option>
-                                    <option>Enterprise Business Services (75)</option>
-                                    <option>Health Services (296)</option>
-                                    <option>Technology Services (157)</option>
-                                  </select>
-                              </li>
-                                 
-                              <li>
-                                  <button type="submit" class="usa-button-demo">Submit</button>
-                              </li>
-                            </ul>
-                              
-                            </form>
-                      </div>
-                  </div>
-                </div>
-            </article>
-          </div>
-
-          <div class="usa-width-one-half">
-            <article class="usa-card">
-              <div class="usa-card_divider usa-card--blue-darkest"> <span class="usa-card_title"><abbr title="Department of Veterans Affairs"> ADS Selection & API discovery</span></div>  
-              <div class="usa-card_section">
+    <main id="main-content">
+      <section class="usa-section usa-section-gray ">
+        <div class="usa-grid">
+          <h1 class="va-page-title">Authoritative Data Sources (ADS)</h1>
+        </div>
+      </section>
+      <section class="usa-section usa-section-light va-colpadding_20">
+        <div class="usa-grid">
+          <article class="usa-width-one-whole">
+            <div class="usa-width-one-half">
+              <article class="usa-card">
+                <div class="usa-card_divider usa-card--blue-darkest"> <span class="usa-card_title"><abbr title="Department of Veterans Affairs">Project Details</span></div>
+                <div class="usa-card_section">
                   <div class="row">
-                    <div class="input-group input-group-ads">
-                          <form class="button-group usa-button-secondary">
-
-                            <ul>
+                    <div class="input-group">
+                      <div class="input-group">
+                        <form class="button-group usa-button-secondary">
+                          <ul>
+                            <li>
+                              <label class="label-name" for="org">Name<span style="padding-right: 50px;"></span></label>
+                              <input placeholder="First, Last" type="name" id="name" aria-describedby="nameHelp" placeholder="First, Last" class="form-control">
+                            </li>
+                            <li>
+                              <label for="org">Organization</label>
+                              <select class="form-control" id="org">
+                                <option>VHA</option>
+                                <option>VBA</option>
+                                <option>MCA</option>
+                                <option>OIT</option>
+                                <option>VACO</option>
+                              </select>
+                            </li>
+                            <li>
+                              <label for="org">Portfolio<span style="padding-right: 30px;"></span></label>
+                              <select class="form-control" id="portfolio">
+                                <option>Select Portfolio</option>
+                                <option>Corporate Services (116)</option>
+                                <option>Benefits and Memorial Services (75)</option>
+                                <option>Enterprise Business Services (75)</option>
+                                <option>Health Services (296)</option>
+                                <option>Technology Services (157)</option>
+                              </select>
+                            </li>
+                            
+                          </ul>
+                          
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="usa-width-one-half">
+                <article class="usa-card">
+                  <div class="usa-card_divider usa-card--blue-darkest"> <span class="usa-card_title"><abbr title="Department of Veterans Affairs"> ADS Selection &
+                  discovery</span></div>
+                  <div class="usa-card_section">
+                    <div class="row">
+                      <div class="input-group input-group-ads">
+                        <form class="button-group usa-button-secondary">
+                          <ul>
+                            <li>
+                              <label class="avail-ads" for="org">Available ADS</label>
+                              <select class="" id="org">
+                                <option>IAM MVI</option>
+                                <option>eCAI</option>
+                                <option>CMS</option>
+                                <option>HRIS</option>
+                                <option>VADIR</option>
+                              </select>
+                            </li>
+                            <li>
                               <li>
-                                <label class="avail-ads" for="org">Available ADS</label>
-                                  <select class="" id="org">
-                                  <option>IAM MVI</option>
-                                  <option>eCAI</option>
-                                  <option>CMS</option>
-                                  <option>HRIS</option>
-                                  <option>VADIR</option>
-                                </select>
-                              </li>
-
-                              <li>
-                                 <li>
                                 <label class="avail-ads" for="api-dis">API Discovery</label>
-                                  <select onChange="window.open(this.value)" class="" id="apidis">
+                                <select onChange="window.open(this.value)" class="" id="apidis">
                                   <option value="">Select Service</option>
                                   <option value="https://developer.va.gov">API A MVI Index Search</option>
                                   <option value="https://escp.va.gov">API B MVI Sync </option>
                                   <option>API C MVI maintenance </option>
                                 </select>
                               </li>
-                              <li>Exception</li>
-                                 <li>      
-                                  <button type="submit" class="usa-button-demo">Submit</button>
+                              <li>
+                                
+                                <label class="label-name" for="test">Exception<span style="padding-right: 30px;"></span></label>
+                              <input placeholder="" type="name" id="name" aria-describedby="nameHelp" placeholder="First, Last" class="form-control">
                               </li>
+                              
                             </ul>
-                          
-                          
                           </form>
+                        </div>
+                      </div>
+                      
                     </div>
-
-                  </div>
-               
+                  </article>
+                  </div><!--end usa-width-one-half!-->
+                </article>
               </div>
-            </article>
-          </div><!--end usa-width-one-half!-->
-
-
-        </article>
-      </div>
-    </section>
-    <section class="usa-section usa-section-light">
-      <div class="usa-grid">
-        <article class="usa-width-one-whole">
-          <div class="usa-width-one-half">
-            <article class="usa-card">
-              <div class="usa-card_divider usa-card--blue-darkest"> <span class="usa-card_title"><abbr title="Department of Veterans Affairs">Management Protocol</span></div>
-              <div class="usa-card_section">
-                  <form class="button-group usa-button-secondary">
-                        <ul>
-                          <li>
-                            <label class="test" for="test">Data Sharing Agreement</label>
+            </section>
+            <section class="usa-section usa-section-light">
+              <div class="usa-grid">
+                <article class="usa-width-one-whole">
+                  <div class="usa-width-one-half">
+                    <article class="usa-card">
+                      <div class="usa-card_divider usa-card--blue-darkest"> <span class="usa-card_title"><abbr title="Department of Veterans Affairs">Management Protocol</span></div>
+                      <div class="usa-card_section">
+                        <form class="button-group usa-button-secondary">
+                          <ul>
+                            <li>
+                              <label class="test" for="test">Data Sharing Agreement</label>
                               <select onChange="window.open(this.value)" class="form-control" id="test">
-                                <option value="pdf-file-name.pdf">Download pdf</option>
+                                <option value="index.html">Select option</option>
+                                <option value="DSA_Strawman.pdf">Download pdf</option>
                               </select>
-                          </li>
-                          <li> 
-                            <label class="avail-ads" for="access-rules"><span style="padding-right:83px;">Access Rules</span></label>
+                            </li>
+                            <li>
+                              <label class="avail-ads" for="access-rules"><span style="padding-right:83px;">Access Rules</span></label>
                               <select class="form-control" id="ac">
+                                <option>Select rule</option>
                                 <option>Business Rules</option>
                                 <option>Data Rules</option>
                               </select>
-                          </li>
-                          <li>
-                            <label class="test" for="test"><span style="padding-right:43px;">Statement of Work</span></label>
+                            </li>
+                            <li>
+                              <label class="test" for="test"><span style="padding-right:43px;">Statement of Work</span></label>
                               <select onChange="window.open(this.value)" class="form-control" id="test">
-                                <option value="statement-of-work.pdf">Download pdf</option>
+                                <option>Select option</option>
+                                <option value="Statement_Of_Work.pdf">Download pdf</option>
                               </select>
-                          </li>
-                          <li>
-                            <label class="test" for="test"><span style="padding-right:132px;">Quality</span></label>
+                            </li>
+                            <li>
+                              <label class="test" for="test"><span style="padding-right:132px;">Quality</span></label>
                               <select onChange="window.open(this.value)" class="form-control" id="test">
+                                <option>Select option</option>
                                 <option value="quality.pdf">Download pdf</option>
                               </select>
-                          </li>
-                          
-                            <!--  <label class="avail-ads" for="magpro">Management Protocol</label>
-                              <select onChange="window.open(this.value)" class="form-control" id="magpro">
-                                <option>Management Protocol Artifacts</option>
-                                <option value="data-sharing-agreement.html">Data Sharing Aggreement</option>
-                                <option>Statement of Purpose</option>
-                                <optgroup label="Access Rules" class="usa-optgroup usa-optgroup option">
-                                  <option id="business-rules">Business Rules</option>
-                                    <option style="color: #0071bc;"><span style="padding-left: 20px;"></span> Information Class</option>
-                                    <option><span style="padding-left: 20px;">Interface Models</span></option>
-                                    <option><span style="padding-left: 20px;">Data Format</span></option>
-                                    <option><span style="padding-left: 20px;">Message Protocol</span></option>
-                                    <option><span style="padding-left: 20px;">Authentication</span></option>
-                                    <option><span style="padding-left: 20px;">Exception Handling</span></option>
-                                  <option id="data-rules">Data Rules</option>
-                                    <option><span style="padding-left: 20px;"></span>Federation</option>
-                                    <option><span style="padding-left: 20px;"></span>Identity Proofing</option>
-                                    <option><span style="padding-left: 20px;"></span>Identity Provisioning</option>
-                                    <option><span style="padding-left: 20px;"></span>Multi-Factor Authentication</option>
-                                    <option><span style="padding-left: 20px;"></span>Single Sign On</option>
-                                    <option><span style="padding-left: 20px;"></span>User Account Restoration</option>
-                                </optgroup>
-                                <option>Usage Policies</option>
-                                <option>Data Quality Requirements</option>
-                              </select>
-                          </li> -->
-                           
-                            <li>
-                                  <button type="submit" class="usa-button-demo">Submit</button>
+                            </li>
+                            
+                            
+                            
+                            
+                          </ul>
+                        </form>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="usa-width-one-half">
+                    <article class="usa-card">
+                      <div class="usa-card_divider usa-card--blue-darkest"> <span class="usa-card_title"><abbr title="Department of Veterans Affairs">Technical Protocol</span></div>
+                      <div class="usa-card_section">
+                        <div class="form-group">
+                          <form class="button-group usa-button-secondary">
+                            <ul>
+                              <li>
+                                <label class="test" for="test">
+                                  
+                                  <span style="padding-right:50px;">Crud Matrix</span>
+                                </label>
+                                <select onChange="window.open(this.value)" class="form-control" id="test">
+                                  <option>Select option</option>
+                                  <option value="CRUD_Matrix.pdf">Download pdf</option>
+                                </select>
                               </li>
-                    
-                        </ul>
-                    </form>  
-              </div>
-            </article>
-          </div>
-          <div class="usa-width-one-half">
-            <article class="usa-card">
-              <div class="usa-card_divider usa-card--blue-darkest"> <span class="usa-card_title"><abbr title="Department of Veterans Affairs">Technical Protocol</span></div>
-              <div class="usa-card_section">
-                 <div class="form-group">
-                    <form class="button-group usa-button-secondary">
-                       <ul>
-                          <li>
-                              <label class="test" onChange="window.open(this.value)" for="test">
-                                
-                                <span style="padding-right:50px;">Crud Matrix</span>
-                              </label>
-                              <select class="form-control" id="test">
-                                <option value="change-to-your-own-pdf-name.pdf">Download pdf</option>
-                              </select>
-                          </li>
-                          <li>
-                             <label class="test" for="test">
-                                <span style="padding-right:8px;">Information Class</span>
-                              </label>
-                              <select class="form-control" id="test">
-                                <option value="change-to-your-own-pdf-name.pdf">Download pdf</option>
-                            </select>
-                          </li>
-
-                          <li>
-                              <label class="test" for="test">
-                                <span style="padding-right:105px;">APIs</span>
-                              </label>
-                              <select class="form-control" id="test">
-                                <option>Value A </option>
-                                <option>Value B</option>
-                              </select>
-                          </li>
-                            <!-- <label class="avail-ads" for="techpro">Technical Protocol</label>
-                            <select class="form-control" id="techpro">
-                              <option>Technical Protocol Artifacts</option>
-                              <option>Information Class</option>
-                              <option>Interface Models</option>
-                              <option>Data Format</option>
-                              <option>Message Protocol</option>
-                              <option>Authentication</option>
-                              <option>Exception Handling</option>
-                            </select>
-                          </li> -->
-                          <li>
+                              <li>
+                                <label class="test" for="test">
+                                  <span style="padding-right:8px;">Information Class</span>
+                                </label>
+                                <select onChange="window.open(this.value)"class="form-control" id="test">
+                                  <option>Select option</option>
+                                  <option value="Information_Class.pdf">Download pdf</option>
+                                </select>
+                              </li>
+                              <li>
+                                <label class="test" for="test">
+                                  <span style="padding-right:105px;">APIs</span>
+                                </label>
+                                <select class="form-control" id="test">
+                                  <option>Select option</option>
+                                  <option>Details of Code and API description, Restriction Access</option>
+                                  
+                                  <option>New or Modified needed </option>
+                                </select>
+                              </li>
+                            <li>
                               <label class="test" for="test">
                                 <span style="padding-right:48px;">IAM Access</span>
                               </label>
-                              <select class="form-control" id="test">
-                                <option>Download Pdf </option>
+                              <select onChange="window.open(this.value)"class="form-control" id="test">
+                                <option>Select option</option>
+                               <option value="IAM_EDP.pdf">Download pdf</option>
                                 <option>Create New</option>
                               </select>
-                          </li>
-                           <li>
-                             <button type="submit" class="usa-button-demo">Submit</button>
-                          </li>
-                        
-                        </ul>
+                            </li>
                             
-                       
-                    </form>
-                  </div>
-              </div>
-            </article>
+                          </ul>
+                        </form>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </article>
+            </div>
+            <p style="text-align: center;"><a href="confirmation.html"><button type="submit" class="usa-button-demo">Submit</button></a><p>
+          </section>
+
+        </main>
+        <footer class="usa-section usa-section-lighter va-border-top" role="contentinfo" style="background-color: #102F51;">
+          <div class="usa-grid va-margin_bottom">
+           <!--  <footer xmlns="http://www.w3.org/1999/xhtml"><style xmlns:ee="http://enterprise-elements.com/template-tag" type="text/css">
+              .navbar-fixed-bottom{
+              background:#dcddde;
+              height:30px;
+              border-top:1px inset #939393;
+              }
+              
+              .btn-md{
+              background-color: rgb(0,131,190);
+              background-image: none;
+              margin-left: 4px;
+              margin-right: 4px;
+              }
+              </style><div style="min-height:30px;" class="navbar navbar-default navbar-fixed-bottom"><div style="margin-top:5px;" class="navbar-text pull-left"><div style="font-size: 11px;" class="btn-group"><a title="Intranet site for Department of Veterans Affairs" target="_blank" href="http://vaww.va.gov/">Intranet Home</a> |
+              <a title="Intranet site for Veterans Health Administration" target="_blank" href="http://vaww.va.gov/health/">VHA Intranet Home</a> |
+              <a title="Intranet site for Veterans Benefits Administration" target="_blank" href="http://vbaw.vba.va.gov/">VBA Intranet Home</a> |
+              <a title="Intranet site for National Cemetery Administration" target="_blank" href="http://vaww.nca.va.gov/">NCA Intranet Home</a> |
+              <a title="Section 508 Accessibility" target="_blank" href="http://vaww.section508.va.gov/">Section 508 Accessibility</a> |
+              <a title="Privacy policy" target="_blank" href="http://www.va.gov/privacy/">Privacy Policy</a> |
+              <a title="No Fear Act information" target="_blank" href="http://vaww.va.gov/ohrm/EmployeeRelations/grievance.htm">No Fear Act</a> |
+              <a title="VA Enterprise Architecture Website" target="_blank" href="http://vaww.ea.oit.va.gov">VA Enterprise Architecture</a></div></div></div>
+            </footer> -->
+            <p style="text-align:center;"><img style="width: 400px;" src="img/va-temp-screenshot.png"></p>
+            
           </div>
-        </article>
-      </div>
-    </section>
-  </main>
-  <footer class="usa-section usa-section-lighter va-border-top" role="contentinfo">
-    <div class="usa-grid va-margin_bottom">
-      <div class="usa-width-one-fourth">
-        <h3>VA MISSION</h3>
-        <p>To fulfill President Lincoln's promise <em>&ldquo;To care for him who shall have borne the battle,
-          and for his widow, and his orphan&rdquo;</em> by serving and honoring the men and women who are
-        America&rsquo;s Veterans</p>
-        <h3>SUBSCRIBE</h3>
-        <p>Get the latest VA News products delivered to your inbox.</p>
-        <a href="https://public.govdelivery.com/accounts/USVA/subscriber/new/" class="usa-button usa-button-red va-noradius"
-          title="the will take you to the GovDelivery subscription form for VA and will open a new window or tab"
-        target="_blank">SUBSCRIBE TODAY!</a>
-      </div>
-      <nav class="usa-width-one-half mobile-hide">
+        </footer>
         
-        <h3>VETERAN PROGRAMS AND SERVICES</h3>
-        <ul class="usa-unstyled-list" style="column-count:2;column-width:200px;column-gap:2rem;">
-          <li><a href="https://www.va.gov/homeless/">For Homeless Veterans</a></li>
-          <li><a href="https://www.va.gov/womenvet/">For Women Veterans</a></li>
-          <li><a href="https://www.va.gov/centerforminorityveterans/">For Minority Veterans</a></li>
-          <li><a href="https://www.ptsd.va.gov">PTSD</a></li>
-          <li><a href="https://www.mentalhealth.va.gov/">Mental Health</a></li>
-          <li><a href="https://www.publichealth.va.gov/">Public Health</a>
-          <li><a href="https://www.accesstocare.va.gov/ourproviders/">Find a VA Healthcare Provider</a></li>
-          <li><a href="https://www.va.gov/adaptivesports/">Adaptive Sports and Special Events</a></li>
-          <li><a href="https://www.va.gov/vso/">Veterans Service Organizations (VSO)</a></li>
-        </ul>
-        <h3>ADDITIONAL VA RESOURCES</h3>
-        <ul class="usa-unstyled-list" style="column-count:2;column-width:200px;column-gap:2rem;">
-          <li><a href="https://explore.va.gov">Explore VA</a></li>
-          <li><a href="https://www.va.gov/landing2_locations.htm">Find a VA Location</a></li>
-          <li><a href="https://www.va.gov/vaforms/">VA Forms</a></li>
-          <li><a href="https://www.va.gov/health/">Veterans Health Administration (VHA)</a></li>
-          <li><a href="https://benefits.va.gov/benefits/">Veterans Benefits Administration (VBA)</a></li>
-          <li><a href="https://cem.va.gov/">National Cemetery Administration (NCA)</a></li>
-          <li><a href="https://www.va.gov/jobs/">Careers at VA</a></li>
-          <li><a href="https://www.va.gov/COMMUNITYCARE/programs/veterans/VCP/index.asp">Veterans Choice Program</a></li>
-          <li><a href="https://www.accesstocare.va.gov/">Access to Care</a></li>
-          <li><a href="https://www.va.gov/landing2_business.htm">Doing Business with VA</a></li>
-          <li><a href="https://www.va.gov/opa/">Public Affairs</a></li>
-          <li><a href="https://www.va.gov/opa/pressrel/">News Releases</a></li>
-        </ul>
-      </nav>
-      <div class="usa-width-one-fourth">
-        <h3>CONNECT WITH VA</h3>
-        <ul class="fa-ul">
-          <li><span class="fa-li"><i class="fas fa-rss"></i></span><a href="https://www.blogs.va.gov/VAntage">VAntage
-        Point</a></li>
-        <li><span class="fa-li"><i class="fab fa-facebook facebook"></i></span><a href="https://www.facebook.com/VeteransAffairs">Facebook</a></li>
-        <li><span class="fa-li"><i class="fab fa-twitter twitter"></i></span><a href="https://www.twitter.com/DeptVetAffairs/">Twitter</a></li>
-        <li><span class="fa-li"><i class="fab fa-youtube youtube_red"></i></span><a href="https://www.youtube.com/user/DeptVetAffairs">YouTube</a></li>
-        <li><span class="fa-li"><i class="fab fa-flickr flickr"></i></span><a href="https://www.flickr.com/photos/VeteransAffairs/">Flickr</a></li>
-        <li><span class="fa-li"><i class="fab fa-instagram instagram"></i></span><a href="https://www.instagram.com/deptvetaffairs/">Instagram</a></li>
-        <li><span class="fa-li"><i class="fas fa-mobile"></i></span><a href="https://mobile.va.gov/appstore/">VA
-      Mobile Apps</a></li>
-      <li><span class="fa-li"><i class="fas fa-list"></i></span><a href="https://www.va.gov/opa/socialmedia.asp">Socia
-    Media Index</a></li>
-  </ul>
-  <h3>In Crisis? Get Help Now</h3>
-  <a href="http://www.veteranscrisisline.net/" class="usa-button va-noradius">Veterans Crisis Line</a>
-</div>
-</div>
-</footer>
-<section class="usa-secion  usa-section-blue-midnight">
-<div class="usa-grid va-colpadding_20" style="height:8rem; text-align:center;">
-<a href="https://www.va.gov" title="go to the VA homepage"><img src="img/Official_VA_Seal.png"
-style="margin:-3rem auto; position:relative;max-width:10rem;" alt="Official VA seal" /></a>
-</div>
-</section>
-<section class="usa-secion usa-section-black  mobile-hide">
-<div class="usa-grid">
-<p class="copyright">
-  <span><a href="https://www.va.gov/oei/docs/VA2018-2024strategicPlan.pdf">VA Strategic Plan</a></span>
-  <span><a href="https://www.oprm.va.gov/privacy/">Privacy</a></span>
-  <span><a href="https://www.va.gov/web/standards/disclaimer.cfm">Disclaimers</a></span>
-  <span><a href="https://www.va.gov/oig/">Inspector General</a></span>
-  <span><a href="https://www.oprm.va.gov/foia/">FOIA</a></span>
-  <span><a href="https://www.va.gov/orm/NOFEAR_Select.asp">No FEAR Act</a></span>
-  <span><a href="https://www.va.gov/accountability">Whistleblower and Rights
-  Protection</a></span>
-  <span><a href="https://www.va.gov/web/standards/">Website Policies</a></span>
-  <span><a href="https://www.data.va.gov">Open Data</a></span>
-  <br />
-  <p>
-  </div>
-</section>
-<!--Digital Analytics-->
-<script  id="_fed_an_ua_tag" language="javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?ver=true&amp;agency=VA&amp;pua=UA-116363162-1" defer></script>
-<div id="modal-crisisline" class="va-overlay va-modal va-modal-large" role="alertdialog">
-  <div class="va-crisis-panel va-modal-inner">
-    <div class="va-overlay-body va-crisis-panel-body">
-      <h3 class="usa-serif va-modal-title">We&rsquo;re here anytime, day or night - 24/7</h3>
-      <p class="va-padding_bottom-sm">If you are a Veteran in crisis or concerned about one, connect with our caring, qualified responders for confidential help. Many of them are Veterans themselves.</p>
-      <ul>
-        <li><a href="tel:18002738255" tabindex='0' id="va-crisis-primary"><i class="fas fa-phone icon-left" aria-hidden="true"></i>
-        Call <strong>1-800-273-8255 and press 1</strong></a></li>
-        <li><a href="sms:838255"><i class="fas fa-mobile-alt icon-left" aria-hidden="true"></i> Text to <strong>838255</strong></a></li>
-        <li><a href="https://www.veteranscrisisline.net/ChatTermsOfService.aspx?account=Veterans%20Chat"><i class="far fa-comments  icon-left"></i>Chat
-        <strong>confidentially now</strong></a></li>
-        <li><a href="tel:18007994889"><i class="fa fa-deaf icon-left" aria-hidden="true"></i> Call TTY if you have
-        hearing loss <strong>1-800-799-4889</strong></a></li>
-      </ul>
-      <p>If you are in crisis or having thoughts of suicide,
-        visit <a href="https://www.veteranscrisisline.net/">VeteransCrisisLine.net</a> for more resources.</p>
-      </div>
-      <button class="va-modal-close va-overlay-close" type="button" id="va-vcl-close-btn"><span class="usa-sr-only">Close
-      this modal</span> <i class="far fa-times-circle fa-2x va-overlay-close usa-text-blue" aria-hidden="true" title="close this modal"></i>
-      </button>
-    </div>
-  </div>
- 
-   
-    <!--Vue.js Library -->
-    <!-- production version, optimized for size and speed -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <!-- custom script -->
-    <script src="vue-app.js"></script>
-</body></html>
+             
+      </body>
+  </html>

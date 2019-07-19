@@ -41,10 +41,14 @@ select.select-name {
     background: white;
 }
 
+
+p .usa-button-demo {
+    text-align: center;
+}
 .usa-button-demo {
-	 -webkit-font-smoothing: antialiased;
-    margin-top: .5em;
-    margin-right: .5em;
+    -webkit-font-smoothing: antialiased;
+    margin-top: 2rem;
+    margin-right: 2rem;
     margin-bottom: .5em;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -55,13 +59,13 @@ select.select-name {
     color: #fff;
     cursor: pointer;
     display: inline-block;
-    font-size: 1.7rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1;
     padding: 1rem 2rem;
     text-align: center;
     text-decoration: none;
-
+    width: 25%;
 }
 
 .usa-button-demo:hover {
@@ -100,3 +104,5 @@ article.usa-card.usa-magpro {
 	    padding-bottom: 1.75rem;
 	}
 }
+
+
